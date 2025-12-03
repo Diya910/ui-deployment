@@ -7,3 +7,4 @@ Pillow==11.0.0
 pydantic==2.10.3
 python-multipart==0.0.19
 dotenv
+colorthief==0.2.1
