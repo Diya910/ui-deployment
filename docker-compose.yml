@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  ai-creative-studio:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - IMAGE_API_KEY=${IMAGE_API_KEY}
+      - TEXT_API_KEY=${TEXT_API_KEY}
+      - WEATHER_API_KEY=${WEATHER_API_KEY}
+      - GEO_API_KEY=${GEO_API_KEY}
+      - POI_API_KEY=${POI_API_KEY}
+    volumes:
+      - ./output:/app/output
+    restart: unless-stopped
